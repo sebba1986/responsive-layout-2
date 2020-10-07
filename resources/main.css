@@ -13,6 +13,10 @@ html {
 body, .container {
     height: 100%;
 }
+.container {
+    z-index: 1;
+    position: relative;
+}
 header {
     height: 25%;
     background-image: url(../assets/bg-header.jpg);
@@ -269,6 +273,9 @@ textarea::placeholder {
     font-size: 1.5em;
     padding: 10px 30px;
 }
+.seeMenu {
+    display: none;
+}
 
 @media (max-width: 600px) {
     html {
@@ -292,6 +299,9 @@ textarea::placeholder {
     .desktop-menu {
         display: none;
     }
+    .seeMenu {
+        display: block;
+    }
     .mobile-menu {
         display: flex;
         justify-content: center;
@@ -300,6 +310,12 @@ textarea::placeholder {
         font-size: 2.5em;
         width: 20%;
         height: 20%;
+    }
+    .mobile-menu button {
+        color: white;
+        border: 0;
+        background-color: transparent;
+        font-size: 1.5em;
     }
     .title-wrapper {
         font-size: 3.5em;
@@ -384,6 +400,73 @@ textarea::placeholder {
     .send-button-wrapper {
         text-align: right;
         font-size: 0.8em;
+    }
+    .seeMenu {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color : #2b2b2b;
+    }
+    .seeMenu-header {
+        display: flex;
+        justify-content: space-between;
+        height: 10%;
+        padding-left: 20px;
+    }
+    .seeMenu-header>div:first-child {
+        width: 30%;
+        color: white;
+        font-size: 3em;
+        display: flex;
+        align-items: center;
+    }
+    .seeMenu-header img {
+        height: 100%;
+        width: auto;
+    }
+    .seeMenu-header>div:nth-child(2) {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #closeButton {
+        width: 70%;
+        height: 70%;
+        background-color: #2b2b2b;
+        border: 0;
+    }
+    .seeMenu-main {
+        height: 75%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 70px 0 70px 20px;
+        font-size: 4em;
+        font-weight: 300;
+    }
+    .seeMenu-main>a:first-child {
+        font-weight: 400;
+    }
+    .seeMenu-footer {
+        display: flex;
+        height: 15%;
+    }
+    .seeMenu-footer>div {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        color: grey;
+        font-size: 4em;
+    }
+    .hidden {
+        display: none;
     }
 }
 /* @media (min-width:600px, max-width:900px) { */

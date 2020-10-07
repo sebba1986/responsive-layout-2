@@ -21,14 +21,14 @@
                 </div>
                 <div class="desktop-menu">
                     <!-- pe link-uri e good practice sa folosim atributul title la fel ca alt pe <img> -->
-                    <a href="#" title="home">HOME</a>
+                    <a>HOME</a>
                     <a>ABOUT US</a>
                     <a>PROJECTS</a>
                     <a>BLOG</a>
                     <a>CONTACT US</a>
                 </div>
                 <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                    <button id="seeMenuBtn" type="button"><i class="fas fa-bars"></i></button>
                 </div>
                 <div class="title-wrapper">
                     PROJECTS
@@ -134,5 +134,26 @@
                 </div>
             </footer>
         </div>
+        <div id="SeeMenuSection" class="seeMenu hidden">
+            <div class="seeMenu-header">
+                <div><span>go.arch</span></div>
+                <div>
+                    <button id="closeButton" type="button"><img src="assets/icon-close.png" alt="close"></button>
+                </div>
+            </div>
+            <div class="seeMenu-main">
+                <a>Home</a>
+                <a>About us</a>
+                <a>Projects</a>
+                <a>Blog</a>
+                <a>Contact us</a>
+            </div>
+            <div class="seeMenu-footer">
+                <div><span><i class="fas fa-camera-retro"></i></span></div>
+                <div><span><i class="fab fa-facebook-f"></i></span></div>
+            </div>
+        </div>
+        <script src="resources/script.js"></script>
+        <noscript>Your browser currently does not support or has Javascript disabled</noscript>
     </body>
 </html>
